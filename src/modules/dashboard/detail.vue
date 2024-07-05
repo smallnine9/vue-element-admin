@@ -4,6 +4,6 @@ import ComponentA from './components/component.vue'
 <template>
   <div>
     <ComponentA></ComponentA>
-    <h1>Dashboard Detail</h1>
+    <h1 ml-3>Dashboard Detail</h1>
   </div>
 </template>

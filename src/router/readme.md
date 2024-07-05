@@ -1,6 +1,8 @@
 ## 路由系统实现功能
 未登录的用户，导航守卫重定向至登录页
 
+已登录的用户，重定向至首页
+
 ```sh
 router.beforeEach(async (to, from) => {
   if (
