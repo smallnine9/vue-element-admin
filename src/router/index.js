@@ -53,17 +53,21 @@ function generateRoutesFromTree(treeNode, parentPath = '') {
     routes.push({
       path: `${parentPath}`,
       component: _component,
-      children: generateRoutesFromTree(children, '')
+      children: generateRoutesFromTree(children, '\\')
     })
   } else {
     Object.keys(treeNode).forEach(key => {
-      routes.push(...generateRoutesFromTree(treeNode[key], `${key}`))
+      if (parentPath === '\\') {
+        routes.push(...generateRoutesFromTree(treeNode[key], `${key}`))
+      } else {
+        routes.push(...generateRoutesFromTree(treeNode[key], `${parentPath}/${key}`))
+      }
     })
   }
   return routes;
 }
 
-const routes = generateRoutesFromTree(fileTree, '');
+const routes = generateRoutesFromTree(fileTree, '\\');
 console.log(routes)
 
 const router = createRouter({

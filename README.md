@@ -27,7 +27,7 @@ use mock.js to simulate api
 
 
 
-## Recommended IDE Setup
+## 建议IDE:
 
 [VSCode](https://code.visualstudio.com/) + [Vue-Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 

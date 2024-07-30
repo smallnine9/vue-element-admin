@@ -40,5 +40,4 @@ import MeInput from '@/components/MeInput/index.vue';
     background-repeat: no-repeat;
 }
 
-.right-form {}
 </style>
